@@ -163,7 +163,7 @@ int x = reg.register(fn, ln, un, pw);
 
     /**
      * @param args the command line arguments
-     */
+     *////
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
