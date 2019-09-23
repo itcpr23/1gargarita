@@ -127,16 +127,16 @@ public void clear_reg_txtfld(){
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(142, 142, 142)
+                .addGap(161, 161, 161)
                 .addComponent(jButton1)
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
+                .addContainerGap(205, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(64, 64, 64))
+                .addGap(72, 72, 72))
         );
 
         pack();

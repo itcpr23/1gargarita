@@ -17,13 +17,17 @@ import java.util.logging.Logger;
  * @author hp
  */
 public class registration {
+    protected String driver = "com.mysql.jdbc.Driver";
+    protected String url = "jdbc:mysql://localhost/reg?";
+    protected String username = "root";
+    protected String password = "";
     
-    conn con = new conn();
+    connection con = new connection();
      public int register(String firstname,String lastname,String username, String password){
         int r = 0;
         try{
-             Class.forName("com.mysql.jdbc.Driver");
-             Connection conn = (Connection) DriverManager.getConnection(con.url, con.username, con.password);
+             Class.forName(driver);
+             Connection conn = (Connection) DriverManager.getConnection(url, username,password);
              
               String sql = "insert into register values(null,?,?,?,?)";
             PreparedStatement pstmt = (PreparedStatement) conn.prepareStatement(sql);
