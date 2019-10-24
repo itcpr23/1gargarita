@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author HP
- */
+ *////
  public class addproduct_frame {
      protected String driver = "com.mysql.jdbc.Driver";
     protected String url = "jdbc:mysql://localhost/reg?";
@@ -42,7 +42,44 @@ try{
 }
 return z;
 
-    }}
+    }
+    
+    
+    public void delete(int id){
+         try {
+             Class.forName(driver);
+             Connection con = DriverManager.getConnection(url,username,password);
+             PreparedStatement ps = con.prepareStatement("delete from product where id =?");
+             ps.setInt(1, id);
+             ps.executeUpdate();
+         } catch (ClassNotFoundException ex) {
+             Logger.getLogger(addproduct_frame.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (SQLException ex) {
+             Logger.getLogger(addproduct_frame.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        
+    }
+    
+    public void updateQTY(int id, int qty){
+         try {
+             Class.forName(driver);
+             Connection con = DriverManager.getConnection(url,username,password);
+             PreparedStatement ps = con.prepareStatement("update product set quantity = (quantity + ?) where id = ?");
+             ps.setInt(1,qty);
+             ps.setInt(2, id);
+             ps.executeUpdate();
+         } catch (ClassNotFoundException ex) {
+             Logger.getLogger(addproduct_frame.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (SQLException ex) {
+             Logger.getLogger(addproduct_frame.class.getName()).log(Level.SEVERE, null, ex);
+         }
+    }
+ 
+ 
+ 
+ 
+ 
+ }
     
     
 

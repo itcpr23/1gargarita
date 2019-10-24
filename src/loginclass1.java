@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author HP
- */
+ *///
 public class loginclass1 {
     
     protected String driver = "com.mysql.jdbc.Driver";
